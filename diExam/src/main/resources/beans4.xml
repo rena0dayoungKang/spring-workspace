@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- outputer bean생성 -->
+	<bean id="outputter" class="com.example.di.sample4.FileOutputter">
+		<!-- fileOutputter의 변수 filePath 설정-->
+		<property name="filePath">
+			<value>인사.txt</value>
+		</property>
+	</bean> 
+	
+	<!-- messageBean bean생성 -->
+	<bean id="messageBean" class="com.example.di.sample4.MessageBeanImpl">
+		<!-- 1. 생성자 방식으로 injection -->
+		<constructor-arg>
+			<value>스프링</value>
+		</constructor-arg>
+		<!-- 2. 셋터 방식으로 injection -->
+		<property name="greeting">
+			<value>안녕</value>
+		</property>
+		<property name="outputter">
+			<!-- 위에서 생성된 bean객체 id="outputter" 사용-->
+			<ref bean="outputter"></ref>
+		</property>
+	</bean>
+</beans>

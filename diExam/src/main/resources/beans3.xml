@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- bean 객체 생성, id는 변수명과 비슷함 -->
+	<bean id="messageBeanKr" class="com.example.di.sample3.MessageBeanKr"/>
+	<bean id="messageBeanEn" class="com.example.di.sample3.MessageBeanEn"/>
+	
+</beans>

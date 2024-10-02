@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 1. 셋터 방식 -->
+<!-- 	<bean id="account" class="com.example.di.sample5.AccountImpl">
+		<property name="account">
+			<value>1001</value>
+		</property>
+		<property name="name">
+			<value>홍길동</value>
+		</property>
+		<property name="balance">
+			<value>100000</value>
+		</property>
+	</bean> -->
+	
+	<!-- 2. 생성자 방식 -->
+	<bean id="account" class="com.example.di.sample5.AccountImpl">
+		<constructor-arg index="0" value="1001"/>
+		<constructor-arg index="1" value="홍길동"/>
+		<constructor-arg index="2" value="100000"/>
+	</bean>
+</beans>
