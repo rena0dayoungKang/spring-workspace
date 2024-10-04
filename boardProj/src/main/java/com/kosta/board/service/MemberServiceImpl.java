@@ -28,7 +28,7 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public Member login(String id, String password) throws Exception {
 		//MemberDao memberdao = new MemberDaoImpl();
-		Member member = memberDao.selectMember(id); // 李얠� 硫ㅻ쾭瑜� �떞�쓣 媛앹껜
+		Member member = memberDao.selectMember(id); 
 		if (member == null)
 			throw new Exception("아이디 오류");
 		if (!password.equals(member.getPassword()))

@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link href="/resources/css/common.css" rel="stylesheet">
+<link href="resources/css/common.css" rel="stylesheet">
 </head>
 <body>
 	<% if(message !=null){  %>
