@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="./css/common.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/common.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
 /* 	$(function() {
@@ -92,10 +92,10 @@
 				<div class="input">
 					<select disabled id="grade" name="grade" required="required">
 						<option>선택</option>
-						<option>VIP</option>
-						<option>Gold</option>
-						<option>Silver</option>
-						<option>Normal</option>
+						<option value="VIP">VIP</option>
+						<option value="GOLD">Gold</option>
+						<option value="Silver">Silver</option>
+						<option value="Normal">Normal</option>
 					</select>
 				</div>
 			</div>

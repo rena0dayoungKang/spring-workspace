@@ -7,6 +7,8 @@ public class Member {
 	private String password;
 	private String email;
 	private String address;
+	private String nickname;
+	private String profile_image;
 	
 	public Member() {super();}
 	
@@ -18,6 +20,19 @@ public class Member {
 		this.password = password;
 		this.email = email;
 		this.address = address;
+	}
+	
+	
+	public Member(String id, String name, String password, String email, String address, String nickname,
+			String profile_image) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.password = password;
+		this.email = email;
+		this.address = address;
+		this.nickname = nickname;
+		this.profile_image = profile_image;
 	}
 
 
@@ -51,6 +66,28 @@ public class Member {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+
+	public String getNickname() {
+		return nickname;
+	}
+
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+
+
+	public String getProfile_image() {
+		return profile_image;
+	}
+
+
+	public void setProfile_image(String profile_image) {
+		this.profile_image = profile_image;
+	}
+	
+	
 	
 	
 }

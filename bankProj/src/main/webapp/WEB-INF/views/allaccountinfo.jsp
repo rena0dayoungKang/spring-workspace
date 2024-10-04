@@ -19,7 +19,7 @@ List<Account> accs = (List<Account>) (request.getAttribute("accs"));
 .wrap {
    margin: 0 auto;
    border: 1px solid;
-   width: 600px;
+   width: 700px;
 }
 
 .row {
@@ -72,7 +72,6 @@ List<Account> accs = (List<Account>) (request.getAttribute("accs"));
             </div>
          </div>
       </c:forEach>
-      
    </div>
 </body>
 </html>

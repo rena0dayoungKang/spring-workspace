@@ -17,7 +17,7 @@ public class AccountDaoImpl implements AccountDao {
 	@Override
 	public void insertAccount(Account acc) throws Exception {
 		sqlSession.insert("mapper.account.insertAccount",acc);
-		sqlSession.commit();
+		//sqlSession.commit();
 
 	}
 
@@ -31,7 +31,7 @@ public class AccountDaoImpl implements AccountDao {
 	public void updateBalance(Account acc) throws Exception {
 		
 		sqlSession.update("mapper.account.updateBalance",acc);
-		sqlSession.commit();
+		//sqlSession.commit();
 	}
 
 	@Override

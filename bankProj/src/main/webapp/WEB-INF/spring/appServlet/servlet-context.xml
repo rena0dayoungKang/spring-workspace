@@ -12,6 +12,7 @@
 
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven/>
+	<resources mapping="/resources/**" location="/resources/"/>
 	
 	<!-- view의 경로를 지정 prefix + "name" + suffix로 해서 경로를 반환한다 -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
