@@ -39,8 +39,6 @@ public class HeartDaoImpl implements HeartDao {
 		Map<String,Object> param = new HashMap<>();
 		param.put("mem_id", memberId);
 		param.put("board_num", boardNum);
-		//"board_num"�씠�옉 heart.xml�뿉 �엳�뒗 board_num�씠�옉 媛숈븘�빞 �븳�떎. 
-		//
 		sqlSession.delete("mapper.heart.deleteHeart",param);
 		//sqlSession.commit();
 	}

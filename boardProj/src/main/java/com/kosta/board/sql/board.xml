@@ -21,6 +21,7 @@
 		update board
 		<set>
 			<if test="filename!=null">filename=#{filename},</if>
+			<if test="dfilename!=null">dfilename=#{dfilename},</if>
 			<if test="subject!=null">subject=#{subject},</if>
 			<if test="content!=null">content=#{content}</if>
 		</set> 

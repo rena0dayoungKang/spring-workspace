@@ -44,7 +44,7 @@
 		<tr>
 			<td class="td_left"><label for="file">이미지 파일 첨부</label></td>
 			<td class="td_right">
-				<img src="<c:url value="resources/image/plus.png"/>" alt="이미지 선택" id="preview" width="100px"
+				<img src="<c:url value="resources/image/plus.png"/>" alt="이미지 선택" id="preview" width="50px"
 					onclick="document.getElementById('file').click();">
 				<input type="file" name="file" id="file" accept="image/*" onchange="readURL(this);"
 					style="display:none">

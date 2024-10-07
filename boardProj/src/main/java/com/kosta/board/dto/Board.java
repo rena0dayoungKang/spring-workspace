@@ -30,10 +30,6 @@ public class Board {
 		this.dfilename = dfilename;
 	}
 
-
-
-
-
 	public Integer getNum() {
 		return num;
 	}

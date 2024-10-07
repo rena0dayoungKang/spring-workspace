@@ -25,9 +25,9 @@ $(function() {
 			data:{num:${board.num}},
 			success:function(result) {
 				if(result == 'true') {
-					$('#heart').attr('src','image?file=redheart.png');
+					$('#heart').attr('src','resources/image/redheart.png');
 				} else {
-					$('#heart').attr('src','image?file=blackheart.png');
+					$('#heart').attr('src','resources/image/blackheart.png');
 				}
 			},
 			error:function(err) {
@@ -56,7 +56,8 @@ $(function() {
 	<c:if test="${board.filename ne null}">
 		<tr>
 			<td class="td_left"><label>이미지</label></td>
-			<td class="td_right"><img src="image?file=${board.filename }" width="100px"></td>
+			<td class="td_right"><img src="image/${board.filename }" width="100px"></td>
+			<!-- image 라는 컨트롤러를 CommonsController에 생성 -->
 		</tr>
 	</c:if >
 	<c:if test="${board.dfilename ne null}">
@@ -69,14 +70,14 @@ $(function() {
 <br>
 <div id="commandCell">
 	<a href="boardModify?num=${board.num }">수정</a>&nbsp;&nbsp;&nbsp;
-	<a href="boardlist">목록</a>&nbsp;&nbsp;&nbsp;
+	<a href="boardList">목록</a>&nbsp;&nbsp;&nbsp;
 	<c:if test="${member.id ne null }">
 		<c:choose>
 			<c:when test="${heart ne null }">
-				<img src="image?file=redheart.png" width="25px" id="heart">
+				<img src="resources/image/redheart.png" width="25px" id="heart">
 			</c:when>
 			<c:otherwise>
-				<img src="image?file=blackheart.png" width="25px" id="heart">
+				<img src="resources/image/blackheart.png" width="25px" id="heart">
 			</c:otherwise>
 		</c:choose>
 		

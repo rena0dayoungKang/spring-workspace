@@ -9,7 +9,7 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
 	$(function() {
-		$("#doubldId").click(function(e) {
+		$("#doubledId").click(function(e) {
 			e.preventDefault();
 			$.ajax({
 				url:'memberDoubldId',
@@ -41,7 +41,7 @@
 			<div class="row">  
 				<div class="title">아이디</div>
 				<div class="input"><input type="text" name="id" id="id" style="width:120px"/></div>
-				<div class="input">&nbsp;<button id="doubldId">중복</button></div>
+				<div class="input">&nbsp;<button id="doubledId">중복</button></div>
 			</div>
 			<div class="row">  
 				<div class="title">이름</div>
