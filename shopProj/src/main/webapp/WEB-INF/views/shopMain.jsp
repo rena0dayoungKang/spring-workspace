@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,7 +42,7 @@
 			</a>			
 			<p class="gName"><a href="goodsRetrieve?gCode=${item.gCode}">${item.gName }</a></p>
 			<p class="gContent">${item.gContent }</p>
-			<p><span class="gPrice">${item.gPrice }</span>원</p>
+			<p><span class="gPrice"><fmt:formatNumber value="${item.gPrice }" type="number"/></span>원</p>
 		</div>
 		</c:if>
 	</c:forEach>

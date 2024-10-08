@@ -87,12 +87,14 @@ $(document).ready(function(){
 			</div>
 	</header>
 	<div class="order">
-	<c:if test="${not empty cDTO}">
+	<!-- 1. 카트(장바구니)에 담긴 상품에서 order -->
+	<c:if test="${not empty cDTO}"> 
 		<c:set var="gColor" value="${cDTO.gColor}"/>
 		<c:set var="gSize" value="${cDTO.gSize}"/>
 		<c:set var="gAmount" value="${cDTO.gAmount}"/>	
 		<c:set var="num" value="${cDTO.num}"/>	
 	</c:if>
+	<!-- 2. 상품상세보기에서 바로 order -->
 	<c:if test="${empty cDTO}">
 		<c:set var="cDTO" value="${gDTO}"/>		
 	</c:if>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -164,12 +164,12 @@ $(document).ready(function(){
 						<td>
 							<span class="gName">${item.gName}</span>
 							<span class="gOption">[옵션:사이즈(${item.gSize}),색상(${item.gColor})]</span>
-						<td>${item.gPrice}원</td>
+						<td><fmt:formatNumber value="${item.gPrice}" type="number"/>원</td>
 						<td>
 							<input type="text" name="cartAmount" id="cartAmount${item.num}" value="${item.gAmount}"/>
 							<button type="button" class="updateBtn" data-xxx="${item.num}" data-price="${item.gPrice}">수정</button> 
 						</td>
-						<td><span id="sum${item.num}">${item.gPrice * item.gAmount}원</span></td>
+						<td><span id="sum${item.num}"><fmt:formatNumber value="${item.gPrice * item.gAmount}" type="number"/>원</span></td>
 						<td>
 							<button type="button" class="orderBtn" data-xxx="${item.num}">주문</button>
 						</td>

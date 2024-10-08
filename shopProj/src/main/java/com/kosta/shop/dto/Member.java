@@ -3,6 +3,7 @@ package com.kosta.shop.dto;
 public class Member {
 	
 	private String userid;
+	private String username;
 	private String passwd;
 	private String post;
 	private String addr1;
@@ -12,6 +13,14 @@ public class Member {
 	private String phone3;
 	private String email1;
 	private String email2;
+	
+	
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
 	public String getUserid() {
 		return userid;
 	}
@@ -72,10 +81,12 @@ public class Member {
 	public void setEmail2(String email2) {
 		this.email2 = email2;
 	}
-	public Member(String userid, String passwd, String post, String addr1, String addr2, String phone1, String phone2,
-			String phone3, String email1, String email2) {
+
+	public Member(String userid, String username, String passwd, String post, String addr1, String addr2, String phone1,
+			String phone2, String phone3, String email1, String email2) {
 		super();
 		this.userid = userid;
+		this.username = username;
 		this.passwd = passwd;
 		this.post = post;
 		this.addr1 = addr1;

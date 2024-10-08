@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="result">	
-	<h1>${action }</h1>
+	<h1>${action }</h1>  <!-- 컨트롤러에서 action 필요 -->
 	<hr>
 	<h3>${message}</h3>
 	

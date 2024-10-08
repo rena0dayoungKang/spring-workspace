@@ -14,8 +14,7 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public Member login(String userid, String passwd) throws Exception {
-		Member member = memberDao.selectMember(userid);
-		
+		Member member = memberDao.selectMember(userid);		
 		if (member == null) {
 			throw new Exception("아이디 오류");
 		}
@@ -26,15 +25,14 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public void join(Member member) throws Exception {
+	public void signUp(Member member) throws Exception {
 		memberDao.insertMember(member);		
 	}
 
 	@Override
-	public boolean checkDoubleId(String userid) throws Exception {
-		Member member = memberDao.selectMember(userid);
-		if (member == null) return false;
-		return true;
+	public boolean idCheck(String userid) throws Exception {
+		Integer cnt = memberDao.idCheck(userid);
+		return cnt != 0;
 	}
 
 }

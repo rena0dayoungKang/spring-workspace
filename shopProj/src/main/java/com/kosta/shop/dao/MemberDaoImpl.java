@@ -19,9 +19,19 @@ public class MemberDaoImpl implements MemberDao {
 
 	@Override
 	public void insertMember(Member member) throws Exception {
-		Member smember = selectMember(member.getUserid());
-		if (smember != null) throw new Exception("아이디 중복 오류");
+//		Member smember = selectMember(member.getUserid());
+//		if (smember != null) throw new Exception("아이디 중복 오류");
 		sqlSession.insert("mapper.member.insertMember", member);		
+	}
+
+	@Override
+	public Integer idCheck(String userid) throws Exception {
+		return sqlSession.selectOne("mapper.member.idCheck", userid);
+	}
+
+	@Override
+	public void updateMember(Member member) throws Exception {
+		sqlSession.update("mapper.member.updateMember", member);
 	}
 
 }

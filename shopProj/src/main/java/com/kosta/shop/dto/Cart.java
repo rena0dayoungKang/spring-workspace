@@ -4,10 +4,11 @@ public class Cart {
 	
 	private Integer num;
 	private String userid;
+	
 	private String gCode;
 	private String gName;
 	private Integer gPrice;
-	private Character gSize;
+	private String gSize;
 	private String gColor;
 	private Integer gAmount;
 	private String gImage;
@@ -41,10 +42,10 @@ public class Cart {
 	public void setgPrice(Integer gPrice) {
 		this.gPrice = gPrice;
 	}
-	public Character getgSize() {
+	public String getgSize() {
 		return gSize;
 	}
-	public void setgSize(Character gSize) {
+	public void setgSize(String gSize) {
 		this.gSize = gSize;
 	}
 	public String getgColor() {
@@ -65,7 +66,7 @@ public class Cart {
 	public void setgImage(String gImage) {
 		this.gImage = gImage;
 	}
-	public Cart(Integer num, String userid, String gCode, String gName, Integer gPrice, Character gSize, String gColor,
+	public Cart(Integer num, String userid, String gCode, String gName, Integer gPrice, String gSize, String gColor,
 			Integer gAmount, String gImage) {
 		super();
 		this.num = num;
