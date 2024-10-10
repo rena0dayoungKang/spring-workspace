@@ -1,5 +1,6 @@
 package com.kosta.shop.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,6 +10,8 @@ import org.springframework.stereotype.Service;
 
 import com.kosta.shop.dao.CartDao;
 import com.kosta.shop.dto.Cart;
+import com.kosta.shop.dto.Order;
+import com.kosta.shop.dto.OrderInfo;
 
 @Service
 public class CartServiceImpl implements CartService {
@@ -53,6 +56,40 @@ public class CartServiceImpl implements CartService {
 	@Override
 	public List<Cart> orderAllConfirm(List<Integer> list) throws Exception {
 		return cartDao.selectCheckCart(list);
+	}
+
+	@Override
+	public void orderDone(OrderInfo orderInfo, Order order, Integer orderNum) throws Exception {
+		cartDao.insertOrderInfo(orderInfo);
+		order.setOrderinfo_num(orderInfo.getNum());
+		cartDao.insertOrder(order);
+		if(orderNum != null) {
+			cartDao.deleteCart(orderNum);
+		}
+		
+	}
+
+	@Override
+	public List<Order> orderAllDone(OrderInfo orderInfo, List<Integer> nums) throws Exception {
+		cartDao.insertOrderInfo(orderInfo);
+		List<Cart> checkCart = cartDao.selectCheckCart(nums);
+		List<Order> orderList = new ArrayList<>();
+		for (Cart cart : checkCart) {
+			Order order = new Order();
+			order.setUserid(cart.getUserid());
+			order.setgCode(cart.getgCode());
+			order.setgName(cart.getgName());
+			order.setgPrice(cart.getgPrice());
+			order.setgSize(cart.getgSize());
+			order.setgColor(cart.getgColor());
+			order.setgAmount(cart.getgAmount());
+			order.setgImage(cart.getgImage());
+			order.setOrderinfo_num(orderInfo.getNum());
+			cartDao.insertOrder(order);
+			cartDao.deleteCart(cart.getNum());
+			orderList.add(order);
+		}
+		return orderList;
 	}
 
 }

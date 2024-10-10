@@ -1,13 +1,13 @@
 package com.kosta.shop.dto;
 
-public class Gorder {
+public class Order {
 	
 	private Integer num;
 	private String userid;
 	private String gCode;
 	private String gName;
 	private Integer gPrice;
-	private Character gSize;
+	private String gSize;
 	private String gColor;
 	private Integer gAmount;
 	private String gImage;
@@ -42,10 +42,10 @@ public class Gorder {
 	public void setgPrice(Integer gPrice) {
 		this.gPrice = gPrice;
 	}
-	public Character getgSize() {
+	public String getgSize() {
 		return gSize;
 	}
-	public void setgSize(Character gSize) {
+	public void setgSize(String gSize) {
 		this.gSize = gSize;
 	}
 	public String getgColor() {
@@ -72,7 +72,7 @@ public class Gorder {
 	public void setOrderinfo_num(Integer orderinfo_num) {
 		this.orderinfo_num = orderinfo_num;
 	}
-	public Gorder(Integer num, String userid, String gCode, String gName, Integer gPrice, Character gSize,
+	public Order(Integer num, String userid, String gCode, String gName, Integer gPrice, String gSize,
 			String gColor, Integer gAmount, String gImage, Integer orderinfo_num) {
 		super();
 		this.num = num;
@@ -86,7 +86,7 @@ public class Gorder {
 		this.gImage = gImage;
 		this.orderinfo_num = orderinfo_num;
 	}
-	public Gorder() {
+	public Order() {
 		super();
 	}
 	
