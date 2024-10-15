@@ -2,17 +2,22 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource"/>
+
+	<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations">
-			<list><value>classpath*:com/kosta/bank/sql/*.xml</value></list>		
+			<list>
+				<value>classpath*:com/kosta/bank/sql/*.xml</value>
+			</list>
 		</property>
-		<property name="configLocation" value="/config/mybatis-alias.xml"></property>
+		<property name="configLocation"
+			value="/config/mybatis-alias.xml"></property>
 	</bean>
-	
-	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-		<constructor-arg index="0" ref="sqlSessionFactory"/>
+
+	<bean id="sqlSession"
+		class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
 	</bean>
 
 </beans>

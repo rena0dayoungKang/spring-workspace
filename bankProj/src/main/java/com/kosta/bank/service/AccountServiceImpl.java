@@ -2,11 +2,12 @@ package com.kosta.bank.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.kosta.bank.dao.AccountDao;
-import com.kosta.bank.dao.AccountDaoImpl;
 import com.kosta.bank.dto.Account;
 
-
+@Service
 public class AccountServiceImpl implements AccountService {
 
 	private AccountDao accountdao;

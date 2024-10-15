@@ -167,7 +167,7 @@ public class AccountController {
 	}
 	
 	//비동기방식 데이터 줄때
-	@RequestMapping(value="accDoubleId", method=RequestMethod.POST) //makeaccount ajax url
+	@RequestMapping(value="accountDoubleId", method=RequestMethod.POST) //makeaccount ajax url
 	@ResponseBody //return을 주는 애가 view가 아닌 data를 의미함
 	public String accDoubleId(@RequestParam("id") String id) {
 		try {

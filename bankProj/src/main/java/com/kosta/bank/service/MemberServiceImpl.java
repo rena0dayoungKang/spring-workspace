@@ -1,7 +1,6 @@
 package com.kosta.bank.service;
 
 import com.kosta.bank.dao.MemberDao;
-import com.kosta.bank.dao.MemberDaoImpl;
 import com.kosta.bank.dto.Member;
 
 public class MemberServiceImpl implements MemberService {
